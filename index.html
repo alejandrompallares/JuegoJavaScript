@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Juego</title>
+    <meta charset="utf-8">
+    <meta keywords=" ">
+    <meta description="Juego con JavaScript">
+    <meta robots="Index,Follow">
+    <meta author="AlejandroMPallares">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src='howler.js'></script>
+</head>
+<style>
+    #controles {
+        margin-left: 4%;
+        margin-top: 3%;
+    }
+
+    #info {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+</style>
+
+<body onload="inicializa();">
+    <div class="row">
+        <div CLASS="col-2" id="controles">
+            <h2>CONTROLES JUGADOR 1:</h2><br>
+            <h4>MOVIMIENTO: Cruceta flechas</h4><br>
+            <h4>DISPARO: ALT GR</h4><br><br>
+            <h2>CONTROLES JUGADOR 1:</h2><br>
+            <h4>MOVIMIENTO: W,A,S,D</h4><br>
+            <h4>DISPARO: ESPACIO</h4><br>
+        </div>
+        <div id="canva" class="col"><br><br>
+            <canvas id="canvas" width="750" height="500"></canvas>
+        </div>
+    </div>
+    <div id="info" class="row">
+        <div class="col">
+            <h2>Nombre Jugador1:<h3 id="nombre1"></h3>
+            </h2>
+        </div>
+        <div class="col">
+            <h2>Nombre Jugador2:<h3 id="nombre2"></h3>
+            </h2>
+        </div>
+        <div class="col">
+            <h2>Puntos Jugador 1:<h3 id="puntos1">0</h3>
+            </h2>
+        </div>
+        <div class="col">
+            <h2>Puntos Jugador 2:<h3 id="puntos2">0</h3>
+            </h2>
+        </div>
+    </div>
+    <div id="info" class="row">
+        <div class="col">
+            <h2>LLave:<h3 id="llave">NO</h3>
+            </h2>
+        </div>
+        <div class="col">
+            <h2>Nivel:<h3 id="nivel"></h3>
+            </h2>
+        </div>
+        <div class="col">
+            <h2>Vidas Jugador 1:<h3 id="vidas1">3</h3>
+            </h2>
+        </div>
+        <div class="col">
+            <h2>Vidas Jugador 2:<h3 id="vidas2">3</h3>
+            </h2>
+        </div>
+    </div>
+    <script src="juego.js"></script>
+</body>
+
+</html>
